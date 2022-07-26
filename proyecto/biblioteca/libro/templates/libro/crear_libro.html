@@ -1,0 +1,16 @@
+{% load static %}
+{% block titulo %}
+    Agregar Libro
+{% endblock titulo %}
+
+{% block body %}
+    <form method = "POST">
+        {% csrf_token %}
+        {% if error %}
+            <h2>{{ error }}</h2>
+        {% else %} 
+            {{ libro_form.as_p }}
+            <button type = "submit">Crear</button>
+        {% endif %}
+    </form>
+{% endblock body %}
