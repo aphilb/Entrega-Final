@@ -20,5 +20,5 @@ from libro.views import Home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('libro/', include(('libro.urls','libro'))),
-    path('home/', Home, name = 'index.html')
+    path('', Home, name = 'index.html')
 ]

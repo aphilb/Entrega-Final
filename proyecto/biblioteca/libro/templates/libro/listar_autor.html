@@ -1,9 +1,11 @@
-
-{% load static %}
-
 {% block autores %}
 
     {% if autores %}
+    <h2>Listado de Autores</h2>
+    <br>
+    <a href="{% url 'libro:crear_autor' %}">Agregar Autor</a>
+        <br>
+        <br>
         <table>
             <thead>
                  <tr>
@@ -31,6 +33,7 @@
                 {% endfor %}
             </tbody>
         </table>
+        
     {% else %}
         <h1>No existen autores registrados</h1>
     {% endif %}

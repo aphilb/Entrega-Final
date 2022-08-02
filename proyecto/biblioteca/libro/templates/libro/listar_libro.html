@@ -1,17 +1,16 @@
-{% load static %}
-{% block titulo %}
-    Listado de Libros
-{% endblock titulo %}
-
-{% block body %}
-
-    {% if libro %}
+{% block libro %}
+    {% if libros %}
+    <h2>Listado de Libros</h2>
+    <a href="{% url 'libro:crear_libro' %}">Agregar Libro</a>
+        <br>
+        <br>
         <table>
             <thead>
                  <tr>
                     <th>#</th>
                     <th>Título</th>
                     <th>Descripción</th>
+                    <th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,4 +31,4 @@
         <h1>No existen libros registrados</h1>
     {% endif %}
 
-{% endblock body %}
+{% endblock libro %}
